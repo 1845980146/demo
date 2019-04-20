@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>标题</title>
+
+</head>
+<body>
+
+<script>
+  //1.数据类型：
+  //基本类型：number string boolean undefined null
+  //赋值类型：object Array Function Date Math RegExp(正则表达式) String Number Boolean
+
+  //2.数据类型检测
+  //2.1 typeof
+  //基本数据类型（除了null）和函数
+  // console.log(typeof null);//object
+  // function test(){
+  //   console.log("哈哈");
+  // }
+  // console.log(typeof  test);//function
+
+  //2.2 instanceof
+  // var arr = [10,20,30];
+  // console.log(arr instanceof  Array);//true
+  // console.log(arr instanceof  Object);//true
+
+  //2.3 万能检测
+  //Object.prototype.toString.call(需要检测的类型);
+  // console.log(Object.prototype.toString.call(123));
+  // console.log(Object.prototype.toString.call('abc'));
+  // console.log(Object.prototype.toString.call(true));
+  // console.log(Object.prototype.toString.call(undefined));
+  // console.log(Object.prototype.toString.call(null));//[object Null]
+  // console.log(Object.prototype.toString.call([10,20,30]));//[object Array]
+
+
+  //3.基本包装类型
+  //3.1 Number
+  // num1 = 123;
+  //其实内部帮你把上面这句话做了一个包装。
+  // var num1 = new Number(123);
+  // num1.toString();//为什么这里基本数据类型可以调用方法？ 方法不是对象才可以调用的么？
+  // console.log(num1.toString()); //"123"
+  // console.log(num1.valueOf());//123 取对象的原始值。
+
+
+  //3.2 String
+  // //var str1 = 'abc';
+  // var str1 = new String('abc');
+  // str1.toString();
+
+  //3.3 Boolean
+  // b1 = true;
+  var b1 = new Boolean(true);
+  b1.toString();
+  console.log(b1.valueOf());
+
+
+</script>
+</body>
+</html>
